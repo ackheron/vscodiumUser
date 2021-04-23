@@ -1,0 +1,76 @@
+{
+  "editor.cursorStyle": "block",
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j"],
+      "after": ["h"]
+    },
+    {
+      "before": ["k"],
+      "after": ["j"]
+    },
+    {
+      "before": ["h"],
+      "after": ["i"]
+    },
+    {
+      "before": ["i"],
+      "after": ["k"]
+    },
+    {
+      "before": ["h"],
+      "after": ["i"]
+    }
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j"],
+      "after": ["h"]
+    },
+    {
+      "before": ["k"],
+      "after": ["j"]
+    },
+    {
+      "before": ["h"],
+      "after": ["i"]
+    },
+    {
+      "before": ["i"],
+      "after": ["k"]
+    },
+    {
+      "before": ["h"],
+      "after": ["i"]
+    }
+  ],
+
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["h", "h"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "editor.minimap.enabled": false,
+  "cSpell.userWords": ["quelconque"],
+  "cSpell.language": ",fr",
+  "workbench.colorTheme": "Mayukai Mirage",
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "$HOME/.config/VSCodium/User/.vimrc",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.formatOnSave": true,
+  "editor.fontSize": 13,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#271f04",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f"
+  }
+}
