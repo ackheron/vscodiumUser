@@ -68,9 +68,19 @@
   "workbench.iconTheme": "vscode-icons",
   "editor.formatOnSave": true,
   "editor.fontSize": 13,
+  "editor.fontWeight": "bold",
+  "editor.lineHeight": 20,
   "workbench.colorCustomizations": {
     "statusBar.background": "#271f04",
-    "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f"
-  }
+    "statusBar.noFolderBackground": "#271f04",
+    "statusBar.debuggingBackground": "#271f04"
+  },
+  "emmet.syntaxProfiles": {
+    "html": "xhtml"
+  },
+  "emmet.variables": {
+    "lang": "fr",
+    "charset": "UTF-8"
+  },
+  "cSpell.enabled": false
 }
