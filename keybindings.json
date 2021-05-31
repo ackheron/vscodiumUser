@@ -24,7 +24,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+k",
+    "key": "shift+alt+j",
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
@@ -34,7 +34,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+i",
+    "key": "shift+alt+k",
     "command": "editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
@@ -66,23 +66,23 @@
     "command": "workbench.action.navigateRight"
   },
   {
-    "key": "ctrl+w i",
+    "key": "ctrl+w k",
     "command": "workbench.action.navigateUp"
   },
   {
-    "key": "ctrl+w k",
+    "key": "ctrl+w j",
     "command": "workbench.action.navigateDown"
   },
 
   // Déplace lignes vers le haut
   {
-    "key": "alt+i",
+    "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
   // Déplace lignes vers le bas
   {
-    "key": "alt+k",
+    "key": "alt+j",
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
@@ -94,14 +94,14 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+alt+j",
+    "key": "shift+alt+h",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorTextFocus"
   },
 
   // Navigation entre les tags
   {
-    "key": "ctrl+i",
+    "key": "ctrl+k",
     "command": "gotoNextPreviousMember.previousMember"
   },
   {
@@ -109,7 +109,7 @@
     "command": "-gotoNextPreviousMember.previousMember"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+j",
     "command": "gotoNextPreviousMember.nextMember"
   },
   {
@@ -119,12 +119,12 @@
 
   // Navigation dans la fenetre de l'explorer
   {
-    "key": "alt+k",
+    "key": "alt+j",
     "command": "list.focusDown",
     "when": "listFocus"
   },
   {
-    "key": "alt+i",
+    "key": "alt+k",
     "command": "list.focusUp",
     "when": "listFocus"
   },
@@ -141,23 +141,27 @@
 
   // Navigation dans les fenêtres de suggestions
   {
-    "key": "alt+k",
+    "key": "alt+j",
     "command": "selectNextSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
   {
-    "key": "alt+i",
+    "key": "alt+k",
     "command": "selectPrevSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
   {
-    "key": "alt+k",
+    "key": "alt+j",
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "inQuickOpen"
   },
   {
-    "key": "alt+i",
+    "key": "alt+k",
     "command": "workbench.action.quickOpenNavigatePrevious",
     "when": "inQuickOpen"
+  },
+  {
+    "key": "f10",
+    "command": "workbench.action.toggleZenMode"
   }
 ]

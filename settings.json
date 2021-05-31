@@ -1,55 +1,9 @@
 {
   "editor.cursorStyle": "block",
 
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["j"],
-      "after": ["h"]
-    },
-    {
-      "before": ["k"],
-      "after": ["j"]
-    },
-    {
-      "before": ["h"],
-      "after": ["i"]
-    },
-    {
-      "before": ["i"],
-      "after": ["k"]
-    },
-    {
-      "before": ["h"],
-      "after": ["i"]
-    }
-  ],
-
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["j"],
-      "after": ["h"]
-    },
-    {
-      "before": ["k"],
-      "after": ["j"]
-    },
-    {
-      "before": ["h"],
-      "after": ["i"]
-    },
-    {
-      "before": ["i"],
-      "after": ["k"]
-    },
-    {
-      "before": ["h"],
-      "after": ["i"]
-    }
-  ],
-
   "vim.insertModeKeyBindingsNonRecursive": [
     {
-      "before": ["h", "h"],
+      "before": ["i", "i"],
       "after": ["<Esc>"]
     }
   ],
@@ -67,8 +21,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.iconTheme": "vscode-icons",
   "editor.formatOnSave": true,
-  "editor.fontSize": 13,
-  "editor.fontWeight": "bold",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "normal",
   "editor.lineHeight": 20,
   "workbench.colorCustomizations": {
     "statusBar.background": "#271f04",
@@ -82,5 +36,7 @@
     "lang": "fr",
     "charset": "UTF-8"
   },
-  "cSpell.enabled": false
+  "cSpell.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "window.titleBarStyle": "custom"
 }

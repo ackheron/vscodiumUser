@@ -34,16 +34,6 @@ imap <C-e> <esc>$i<right>
 
 imap <C-a> <esc>0i
 
-noremap i k
-noremap k j
-noremap j h
-noremap h i
-
-vnoremap i k
-vnoremap k j
-vnoremap j h
-vnoremap h i
-
 #nnoremap o o<Esc>
 #nnoremap O O<Esc>
 
