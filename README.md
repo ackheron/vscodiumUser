@@ -2,4 +2,8 @@
 
 Sauvegarde de mon dossier configuration utilisateur VSCodium.
 
-Chemin: /home/USER/.config/VSCodium/User
+Chemin Linux:
+/home/USER/.config/VSCodium/User
+
+
+
