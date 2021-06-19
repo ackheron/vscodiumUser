@@ -43,5 +43,4 @@ nmap <C-o> O<Esc>
 nmap <CR> o<Esc>
 
 " Espace en (normal mode)
-
 nnoremap <Space> i<Space><ESC>

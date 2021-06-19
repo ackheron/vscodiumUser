@@ -58,7 +58,7 @@
   },
   // Navigation entre les fenêtres
   {
-    "key": "ctrl+w j",
+    "key": "ctrl+w h",
     "command": "workbench.action.navigateLeft"
   },
   {
