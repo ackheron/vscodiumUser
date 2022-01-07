@@ -44,3 +44,13 @@ nmap <CR> o<Esc>
 
 " Espace en (normal mode)
 nnoremap <Space> i<Space><ESC>
+
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+vnoremap <leader>dd "_dd
+
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP

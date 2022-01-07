@@ -9,8 +9,16 @@
   ],
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
-  "editor.minimap.enabled": false,
-  "cSpell.userWords": ["quelconque"],
+  "cSpell.userWords": [
+    "browserslist",
+    "Geneva",
+    "prefixed",
+    "quelconque",
+    "responsive",
+    "secondary",
+    "shortcut",
+    "tertiary"
+  ],
   "cSpell.language": ",fr",
   "workbench.colorTheme": "Mayukai Mirage",
   "vim.vimrc.enable": true,
@@ -39,5 +47,21 @@
   "cSpell.enabled": false,
   "window.menuBarVisibility": "compact",
   "window.titleBarStyle": "custom",
-  "workbench.editor.untitled.hint": "hidden"
+  "workbench.editor.untitled.hint": "hidden",
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "vim.easymotion": true,
+  "sync.autoDownload": true,
+  "sync.gist": "f6d82bcc3463f49c24e63bdfb60e0328",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "emmet.extensionsPath": [
+    "/home/chris/.config/VSCodium/User/customEmmet"
+  ],
+  "explorer.confirmDelete": false,
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "liveServer.settings.donotShowInfoMsg": true
 }

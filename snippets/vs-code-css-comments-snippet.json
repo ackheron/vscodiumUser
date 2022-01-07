@@ -1,0 +1,70 @@
+ 
+{
+	"comment": {
+		"prefix": "comment",
+		"body": [
+			"/** ${1:Comment} */"
+		],
+		"description": "Single comment block"
+	},
+	"comment-super-section": {
+		"prefix": "comment-super-section",
+		"body": [
+			"/*==========================================================================================",
+			"=                                  ${1:Section comment block}                                   =",
+			"==========================================================================================*/",
+			"${2}",
+			"/*============================  End of ${1:Section comment block}  ============================*/",
+		],
+		"description": "Comment: Full super sections"
+	},
+	"comment-super-section-header": {
+		"prefix": "comment-super-section-header",
+		"body": [
+			"/*==========================================================================================",
+			"=                                  ${1:Section comment block}                                   =",
+			"==========================================================================================*/"
+		],
+		"description": "Comment: Super sections header"
+	},
+	"comment-super-section-footer": {
+		"prefix": "comment-super-section-footer",
+		"body": [
+			"/*============================  End of ${1:Section comment block}  ============================*/"
+		],
+		"description": "Comment: Super sections footer"
+	},
+	"comment-section": {
+		"prefix": "comment-section",
+		"body": [
+			"/*=============================================",
+			"=            ${1:Section comment block}            =",
+			"=============================================*/",
+			"${2}",
+			"/*=====  End of ${1:Section comment block}  ======*/"
+		],
+		"description": "Comment: Full sections"
+	},
+	"comment-section-header": {
+		"prefix": "comment-section-header",
+		"body": [
+			"/*=============================================",
+			"=            ${1:Section comment block}            =",
+			"=============================================*/"
+		],
+		"description": "Comment: Section header"
+	},
+	"comment-section-footer": {
+		"prefix": "comment-section-footer",
+		"body": [
+			"/*=====  End of ${1:Section comment block}  ======*/"
+		],
+		"description": "Comment: Section footer"
+	},
+	"comment-subsection": {
+		"prefix": "comment-subsection",
+		"body": [
+			"/*----------  ${1:Subsection comment block}  ----------*/"
+		]
+	}
+}

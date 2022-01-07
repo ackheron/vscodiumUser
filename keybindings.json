@@ -87,6 +87,18 @@
     "when": "editorTextFocus && !editorReadonly"
   },
 
+  // Déplace lignes vers la gauche
+  {
+    "key": "alt+h",
+    "command": "editor.action.moveCarretLeftAction"
+  },
+
+  // Déplace lignes vers la droite
+  {
+    "key": "alt+l",
+    "command": "editor.action.moveCarretRightAction"
+  },
+
   // Expension ou réduction d'un région de texte
   {
     "key": "shift+alt+l",
@@ -161,6 +173,12 @@
     "when": "inQuickOpen"
   },
 
+  { "key": "ctrl+alt+meta+f", "command": "explorer.newFile" },
+  {
+    "key": "ctrl+alt+meta+d",
+    "command": "explorer.newFolder"
+  },
+
   // Utilisation générale
   {
     "key": "f10",
@@ -187,5 +205,45 @@
   {
     "key": "shift+alt+p",
     "command": "editor.emmet.action.selectPrevItem"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "workbench.action.files.openFolder",
+    "when": "openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "-copyFilePath",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "-search.action.copyPath",
+    "when": "fileMatchOrFolderMatchWithResourceFocus"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "workbench.action.closeFolder",
+    "when": "emptyWorkspaceSupport && workbenchState != 'empty'"
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "cSpell.suggestSpellingCorrections"
+  },
+  {
+    "key": "ctrl+shift+alt+r",
+    "command": "code-runner.run"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-code-runner.run"
+  },
+  {
+    "key": "ctrl+shift+alt+s",
+    "command": "code-runner.stop"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "-code-runner.stop"
   }
 ]

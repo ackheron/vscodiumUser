@@ -1,0 +1,7 @@
+{
+  "scss": {
+    "snippets": {
+      "remc": "rem-calc(|);"
+    }
+  }
+}
