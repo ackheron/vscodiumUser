@@ -1,0 +1,123 @@
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
+### EXPORT
+export TERM="xterm-256color"                      # getting proper colors
+
+
+### No case sensitive
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+setopt nocaseglob
+
+### Function extract for common file formats ###
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
+
+function extract {
+ if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+    echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
+ else
+    for n in "$@"
+    do
+      if [ -f "$n" ] ; then
+          case "${n%,}" in
+            *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
+                         tar xvf "$n"       ;;
+            *.lzma)      unlzma ./"$n"      ;;
+            *.bz2)       bunzip2 ./"$n"     ;;
+            *.cbr|*.rar)       unrar x -ad ./"$n" ;;
+            *.gz)        gunzip ./"$n"      ;;
+            *.cbz|*.epub|*.zip)       unzip ./"$n"       ;;
+            *.z)         uncompress ./"$n"  ;;
+            *.7z|*.arj|*.cab|*.cb7|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.pkg|*.rpm|*.udf|*.wim|*.xar)
+                         7z x ./"$n"        ;;
+            *.xz)        unxz ./"$n"        ;;
+            *.exe)       cabextract ./"$n"  ;;
+            *.cpio)      cpio -id < ./"$n"  ;;
+            *.cba|*.ace)      unace x ./"$n"      ;;
+            *)
+                         echo "extract: '$n' - unknown archive method"
+                         return 1
+                         ;;
+          esac
+      else
+          echo "'$n' - file does not exist"
+          return 1
+      fi
+    done
+fi
+}
+
+IFS=$SAVEIFS
+
+##########
+
+neofetch
+export PATH=$PATH:/home/chris/.emacs.d/bin/
+
+# vim and emacs
+alias vim="nvim"
+alias em="/usr/bin/emacs -nw"
+alias emacs="emacsclient -c -a 'emacs'"
+alias doomsync="~/.emacs.d/bin/doom sync"
+alias doomdoctor="~/.emacs.d/bin/doom doctor"
+alias doomupgrade="~/.emacs.d/bin/doom upgrade"
+alias doompurge="~/.emacs.d/bin/doom purge"
+
+### Personnal alias ###
+
+alias lsblk="lsblk -fe7 -o +size"
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'  # remove orphaned packages
+alias du="du -sh"
+
+alias gps="git push -u gitlab master && git push -u github master && git push -u bitbucket master"
+alias gpsdev="git push -u gitlab dev && git push -u github dev"
+alias mariadb="mysql -u root -p"
+
+alias ffsync='rsync -vrt ~/.mozilla/firefox/bwk2720z.dev-edition-default /data/sauvegarde360/soft\&profils/profils\ soft/profilFirefox' # sauvegarde profil firefox
+alias codesync='rsync -vrt ~/.vscode-oss/ ~/kdrive/kdriveAck/vsCodeExtensions' # sauvegarde extension vscodium sur kdrive ackheron
+
+alias ls='exa -lha --octal-permissions --git --color=always --group-directories-first'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+
+
+# switch between shells
+# I do not recommend switching default SHELL from bash.
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+
+
+### PATH 
+if [ -d "$HOME/.bin" ] ;   
+    then PATH="$HOME/.bin:$PATH" 
+fi 
+
+if [ -d "$HOME/.local/bin" ] ;   
+    then PATH="$HOME/.local/bin:$PATH" 
+fi 
+if [ -d "$HOME/Applications" ] ;   
+    then PATH="$HOME/Applications:$PATH" 
+fi
+
+
+
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+       if test -n "$KITTY_INSTALLATION_DIR"; then
+            export KITTY_SHELL_INTEGRATION="enabled"
+            autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
+            kitty-integration
+            unfunction kitty-integration
+        fi
+# END_KITTY_SHELL_INTEGRATION

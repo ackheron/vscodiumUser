@@ -1,0 +1,26 @@
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+}
+.menu {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: burlywood;
+}
+h1,
+h2,
+p {
+  text-align: center;
+}
+.flavor {
+  float: left;
+  width: 50%;
+}
+.price {
+  float: right;
+  width: 50%;
+}
+
+.item p {
+  display: inline-block;
+}

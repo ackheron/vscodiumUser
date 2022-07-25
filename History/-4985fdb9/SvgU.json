@@ -1,0 +1,389 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+w v",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "ctrl+w o",
+    "command": "workbench.action.editorLayoutSingle"
+  },
+  {
+    "key": "alt+shift+w",
+    "command": "workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+alt c",
+    "command": "-workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+
+  // Copier lignes sélectionnées vers le haut ou vers le bas
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "editor.emmet.action.balanceOut"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
+
+  // Navigation entre les fenêtres
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+w j",
+    "command": "workbench.action.navigateDown"
+  },
+
+  // Déplace lignes vers le haut
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Déplace lignes vers le bas
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Déplace lignes vers la gauche
+  {
+    "key": "alt+h",
+    "command": "editor.action.moveCarretLeftAction"
+  },
+  // Déplace lignes vers la droite
+  {
+    "key": "alt+l",
+    "command": "editor.action.moveCarretRightAction"
+  },
+
+  // Expansion ou réduction d'un région de texte
+  {
+    "key": "shift+alt+l",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+
+  {
+    "key": "ctrl+shift+j", // go to next, whatever keybinding you want
+    "command": "moveby.regex",
+    "args": ["goToEmpty", "moveby", "next", "end", "wrap"],
+    "when": "editorTextFocus && editorLangId == html" // if html only
+  },
+
+  {
+    "key": "ctrl+shift+k", // go to previous
+    "command": "moveby.regex",
+    "args": ["goToEmpty", "moveby", "prev", "end", "wrap"],
+    "when": "editorTextFocus && editorLangId == html" // if html only
+  },
+
+  // Navigation entre les tags
+  {
+    "key": "ctrl+k",
+    "command": "gotoNextPreviousMember.previousMember"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "-gotoNextPreviousMember.previousMember"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "gotoNextPreviousMember.nextMember"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "-gotoNextPreviousMember.nextMember"
+  },
+
+  // Navigation dans la fenêtre de l'explorer
+  {
+    "key": "alt+j",
+    "command": "list.focusDown",
+    "when": "listFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "list.focusUp",
+    "when": "listFocus"
+  },
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "alt+o",
+    "command": "list.toggleExpand",
+    "when": "listFocus"
+  },
+
+  // Navigation dans les fenêtres de suggestions
+  {
+    "key": "alt+j",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "alt+k",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+  },
+
+  { "key": "ctrl+alt+meta+f", "command": "explorer.newFile" },
+  {
+    "key": "ctrl+alt+meta+d",
+    "command": "explorer.newFolder"
+  },
+
+  // Utilisation générale
+  {
+    "key": "f10",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "-search.action.copyPath",
+    "when": "fileMatchOrFolderMatchWithResourceFocus"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "-copyFilePath",
+    "when": "!editorFocus"
+  },
+
+  // Customisation Emmet
+  {
+    "key": "ctrl+alt+n",
+    "command": "editor.emmet.action.nextEditPoint"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "editor.emmet.action.prevEditPoint"
+  },
+  {
+    "key": "shift+alt+n",
+    "command": "editor.emmet.action.selectNextItem"
+  },
+  {
+    "key": "shift+alt+p",
+    "command": "editor.emmet.action.selectPrevItem"
+  },
+
+  // Ouvrir / fermer un dossier
+  {
+    "key": "ctrl+alt+f",
+    "command": "workbench.action.files.openFolder",
+    "when": "openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "workbench.action.closeFolder",
+    "when": "emptyWorkspaceSupport && workbenchState != 'empty'"
+  },
+
+  // Suggestion correction
+  {
+    "key": "ctrl+alt+s",
+    "command": "cSpell.suggestSpellingCorrections"
+  },
+
+  // Code runner
+  {
+    "key": "ctrl+shift+alt+r",
+    "command": "code-runner.run"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-code-runner.run"
+  },
+  {
+    "key": "ctrl+shift+alt+s",
+    "command": "code-runner.stop"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "-code-runner.stop"
+  },
+
+  // Fermer un onglet
+  {
+    "key": "ctrl+x",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "-workbench.action.closeActiveEditor"
+  },
+
+  // Afficher blockman
+  {
+    "key": "ctrl+shift+[Backslash]",
+    "command": "blockman.toggleEnableDisable"
+  },
+
+  // Commentaires pour turbo console log
+  {
+    "key": "shift+alt+t",
+    "command": "turboConsoleLog.displayLogMessage"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "-turboConsoleLog.displayLogMessage"
+  },
+
+  {
+    "key": "alt+p",
+    "command": "vscode-FileSystemToolbox.OpenFileUnderCursor"
+  },
+
+  // Projet manager
+  {
+    "key": "ctrl+alt+meta+p",
+    "command": "projectManager.addToFavorites"
+  },
+  {
+    "key": "ctrl+alt+meta+o",
+    "command": "projectManager.listProjectsNewWindow"
+  },
+
+  // Raccourcis pour le terminal
+  {
+    "key": "ctrl+alt+meta+k",
+    "command": "workbench.action.terminal.resizePaneUp"
+  },
+  {
+    "key": "ctrl+alt+meta+j",
+    "command": "workbench.action.terminal.resizePaneDown"
+  },
+  {
+    "key": "ctrl+alt+meta+delete",
+    "command": "workbench.action.terminal.kill"
+  },
+  {
+    "key": "ctrl+alt+meta+insert",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+[Backquote]",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+alt+meta+home",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "-workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+alt+meta+home",
+    "command": "workbench.action.terminal.splitInstance",
+    "when": "terminalProcessSupported && terminalTabsFocus"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "-workbench.action.terminal.splitInstance",
+    "when": "terminalProcessSupported && terminalTabsFocus"
+  },
+  {
+    "key": "ctrl+alt+meta+end",
+    "command": "workbench.action.terminal.unsplit"
+  },
+  {
+    "key": "ctrl+alt+meta+pausebreak",
+    "command": "workbench.action.terminal.focusTabs"
+  },
+  {
+    "key": "ctrl+alt+meta+t",
+    "command": "workbench.action.terminal.focus"
+  },
+
+  // Raccourcis pour la side bar
+  {
+    "key": "ctrl+alt+meta+s",
+    "command": "workbench.action.closeSidebar"
+  },
+  {
+    "key": "ctrl+[Comma]",
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "ctrl+k ctrl+s",
+    "command": "-workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "ctrl+[Slash]",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+  {
+    "key": "ctrl+[Period]",
+    "command": "workbench.action.openSettingsJson"
+  }
+]

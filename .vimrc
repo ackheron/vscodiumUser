@@ -43,7 +43,7 @@ nmap <C-o> O<Esc>
 nmap <CR> o<Esc>
 
 " Espace en (normal mode)
-nnoremap <Space> i<Space><ESC>
+" nnoremap <Space> i<Space><ESC>
 
 " delete without yanking
 nnoremap <leader>d "_d
@@ -54,3 +54,23 @@ vnoremap <leader>dd "_dd
 " replace currently selected text with default register
 " without yanking it
 vnoremap <leader>p "_dP
+
+" Déplacement et insertion après et avant un mot
+nnoremap <leader>e ea
+nnoremap <leader>b bi
+
+" Aller à l'onglet numéro ...
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+" Déplacement onglet gauche et droite
+nnoremap H gT
+nnoremap L gt

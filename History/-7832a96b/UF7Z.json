@@ -1,0 +1,99 @@
+{
+  "editor.cursorStyle": "block",
+
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["i", "i"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.leader": "<space>",
+  "cSpell.userWords": [
+    "browserslist",
+    "Geneva",
+    "prefixed",
+    "quelconque",
+    "responsive",
+    "secondary",
+    "shortcut",
+    "tertiary"
+  ],
+  "cSpell.language": ",fr",
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "$HOME/.config/VSCodium/User/.vimrc",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "'JetBrains Mono', 'monospace', monospace",
+  "editor.fontSize": 14,
+  "editor.fontWeight": 600,
+  "editor.lineHeight": 21,
+  "editor.fontLigatures": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#271f04",
+    "statusBar.noFolderBackground": "#271f04",
+    "statusBar.debuggingBackground": "#271f04",
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f"
+  },
+  "emmet.syntaxProfiles": {
+    "html": "xhtml"
+  },
+  "emmet.variables": {
+    "lang": "fr",
+    "charset": "UTF-8"
+  },
+
+  "selectby.regexes": {
+    "goToEmpty": {
+      // "moveby": "<(.*?)>(?=</\\s?\\1)|\"(?=\")",
+      "moveby": "<([^\\s]+).*?>(?=</\\s?\\1)|\"(?=\")"
+    }
+  },
+
+  "cSpell.enabled": true,
+  "window.menuBarVisibility": "compact",
+  "window.titleBarStyle": "custom",
+  "workbench.editor.untitled.hint": "hidden",
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "vim.easymotion": true,
+  "sync.autoDownload": false,
+  "sync.gist": "f6d82bcc3463f49c24e63bdfb60e0328",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "emmet.extensionsPath": ["/home/chris/.config/VSCodium/User/customEmmet"],
+  ///run/media/chris/OsWin10@WesternDigital1000/Users/neore/Application Data/VSCodium/User
+  "explorer.confirmDelete": false,
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "sync.forceUpload": false,
+  "sync.autoUpload": false,
+  "workbench.colorTheme": "Tokyo City Darker",
+  "blockman.n01LineHeight": 0,
+  "diffEditor.wordWrap": "off",
+  "editor.guides.indentation": true,
+  "editor.inlayHints.enabled": false,
+  "blockman.n33A01B2FromDepth0ToInwardForAllBackgrounds": "45,0,0,2; none",
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "cSpell.enableFiletypes": ["jsonc", "vue-html"],
+  "vsicons.dontShowNewVersionMessage": true,
+  "sync.syncExtensions": false,
+  "sync.removeExtensions": false,
+
+  // Supprime par défaut le "restricted mode"
+  "security.workspace.trust.enabled": false,
+
+  // Ouvre un ficher dans un nouvel onglet par défaut
+  "workbench.editor.enablePreview": false
+}
